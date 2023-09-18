@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pre_examen/widgets/title.dart';
 import 'package:pre_examen/widgets/reactive_text.dart';
+import 'package:pre_examen/widgets/data_dialog.dart';
 
 
 Widget reactiveText2 = ReactiveText(name: "Pagina 2", response: "");
@@ -26,12 +27,23 @@ class _MainPageState extends State<MainPage> {
             children: [
               const AwesomeTitle(),
               const Image(image: AssetImage("lib/assets/come_to_the_dart_size.png")),
-              const Text("Seleccione la acción a realizar"),
+              const Text(
+                "Seleccione la acción a realizar:",
+                style: TextStyle(
+                  fontFamily: "SourceSans3",
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: (){},
+                    onPressed: () => showDialog(
+                      context: context,
+                      builder: (BuildContext context) => const DataDialog()
+                    ),
                     child: const Text("Pagina 2")
                   ),
                   ElevatedButton(

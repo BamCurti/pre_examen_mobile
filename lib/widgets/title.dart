@@ -7,9 +7,11 @@ class AwesomeTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      "Bienvenidos",
+      "BIENVENIDOS",
       style: TextStyle(
-        fontFamily: "RobotoMono"
+        fontFamily: "Pacifico",
+        fontSize: 30,
+        color: Colors.grey
       ),
     );
   }
